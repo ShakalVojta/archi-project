@@ -1,0 +1,74 @@
+.footer {
+  background-color: #666666;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap; /* Přidáno pro lepší přizpůsobení menším obrazovkám */
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #007BFF;
+        }
+      }
+
+      span {
+        color: #999;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      .separator {
+        display: none;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 0.5rem;
+
+        a {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 1.5rem;
+    .footer-content {
+      p {
+        font-size: 0.8rem;
+      }
+
+      .footer-links {
+        a {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+}
+
+main {
+  background-color: #f9f9f9;
+}
+
+body {
+  opacity: 0;
+  animation: fadeInPage 1s ease-in-out forwards;
+}
+
+
+@keyframes fadeInPage {
+  to {
+    opacity: 1;
+  }
+}
+
+header, .about, .services, .contact-form, .about-us, footer {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSection 1s ease-in-out forwards;
+}
+
+header {
+  animation-delay: 0.3s;
+}
+
+.about {
+  animation-delay: 0.6s;
+}
+
+.services {
+  animation-delay: 1s;
+}
+
+.about-us {
+  animation-delay: 1.4s;
+}
+
+.contact-form {
+  animation-delay: 1.7s;
+}
+
+footer {
+  animation-delay: 2s;
+}
+
+@keyframes fadeInSection {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header:hover, .about:hover, .services:hover, .contact-form:hover, footer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+button:hover, a:hover {
+  transform: scale(1.05);
+  color: #333;
+}
+
+img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+header, .about, .services, .contact-form, .about-us, footer {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
