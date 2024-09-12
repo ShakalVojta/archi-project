@@ -17,15 +17,15 @@ const About = () => {
             <div className="about-content">
                 <div className="about-text">
                     <div className="text-block">
-                        <Icon path={mdiHandshakeOutline} size={1.5} rotate={40} />
+                        <Icon path={mdiHandshakeOutline} size={1.5} rotate={40} color="black"/>
                         <p>{replaceWithNonBreakingSpace(text1)}</p>
                     </div>
                     <div className="text-block">
-                        <Icon path={mdiCertificateOutline} size={1.5} />
+                        <Icon path={mdiCertificateOutline} size={1.5} color="black"/>
                         <p>{replaceWithNonBreakingSpace(text2)}</p>
                     </div>
                     <div className="text-block">
-                        <Icon path={mdiShieldCheckOutline} size={1.5} />
+                        <Icon path={mdiShieldCheckOutline} size={1.5} color="black"/>
                         <p>{replaceWithNonBreakingSpace(text3)}</p>
                     </div>
                 </div>
