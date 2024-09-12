@@ -19,7 +19,7 @@ const ContactForm = ({ onFormSubmit }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:5001/api/contact', {
+            const response = await fetch('https://archi-project-test.vercel.app/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
