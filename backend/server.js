@@ -10,13 +10,12 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.post('/api/contact', async (req, res) => {
-    const {name, phone, email, sector, buildingType, message} = req.body;
+    console.log('Received request at /api/contact');
+    const { name, phone, email, sector, buildingType, message } = req.body;
+
+    console.log('Contact form submission received:', req.body);
 
     try {
-        console.log('Starting email sending process...');
-        console.log('EMAIL_USER:', process.env.EMAIL_USER);
-        console.log('RECIPIENT_EMAIL:', process.env.RECIPIENT_EMAIL);
-
         const transporter = nodemailer.createTransport({
             host: 'smtp.seznam.cz',
             port: 465,
@@ -50,13 +49,12 @@ app.post('/api/contact', async (req, res) => {
 
         await transporter.sendMail(mailOptions);
 
-        console.log('Email sent successfully');
-        res.status(200).json({message: 'Email úspěšně odeslán!'});
+        res.status(200).json({ message: 'Email úspěšně odeslán!' });
     } catch (error) {
-        console.error('Chyba při odesílání emailu:', error);
-        res.status(500).json({message: 'Chyba při odesílání emailu', error: error.message});
+        console.error('Error during email sending:', error.message);
+        res.status(500).json({ message: 'Chyba při odesílání emailu', error: error.message });
     }
 });
 
-// Export aplikace jako serverless funkce
+module.exports = app;
 module.exports.handler = serverless(app);
