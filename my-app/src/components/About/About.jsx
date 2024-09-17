@@ -2,10 +2,10 @@ import React from 'react';
 import './About.scss';
 import Icon from '@mdi/react';
 import { mdiHandshakeOutline, mdiCertificateOutline, mdiShieldCheckOutline } from '@mdi/js';
-import { useTextUtils } from '../../context/TextUtilsContext.jsx';  // Importujeme náš kontext
+import { useTextUtils } from '../../context/TextUtilsContext.jsx';
 
 const About = () => {
-    const { replaceWithNonBreakingSpace } = useTextUtils(); // Použijeme funkci z kontextu
+    const { replaceWithNonBreakingSpace } = useTextUtils();
 
     const text1 = "Rádi byste se zařadili mezi další obce v ČR, které uspořádají architektonickou soutěž, a potřebujete pomoci s její organizací? Rádi Vám pomůžeme s výběrem nejvhodnějšího dodavatele pro Váš architektonický, krajinářský, urbanistický nebo výtvarný návrh.";
     const text2 = "Jsme tým složený z architektky a právníka, kteří Vás provedou celým průběhem architektonické soutěže. Poskytujeme kompletní poradenství od počátečních příprav přes zajištění řádného procesu až ke zveřejnění a propagaci výsledku.";

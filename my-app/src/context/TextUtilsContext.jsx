@@ -9,8 +9,8 @@ export const TextUtilsProvider = ({ children }) => {
             .replace(/ do /g, ' do\u00A0')
             .replace(/ se /g, ' se\u00A0')
             .replace(/ v /g, ' v\u00A0')
-            .replace(/ k /g, ' i\u00A0')
-            .replace(/ z /g, ' o\u00A0');
+            .replace(/ k /g, ' k\u00A0')
+            .replace(/ z /g, ' z\u00A0');
     };
 
     return (
