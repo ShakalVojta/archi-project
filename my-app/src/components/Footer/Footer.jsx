@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-content">
-                <p>&copy; 2024 Vaše Společnost. Všechna práva vyhrazena.</p>
+                <p>&copy; 2024 Architektonické soutěže. Všechna práva vyhrazena.</p>
                 <div className="footer-links">
                     <a href="mailto:architektonickesouteze@gmail.com">architektonickesouteze@gmail.com</a>
                     <span className="separator">|</span>
