@@ -19,16 +19,20 @@ const ContactForm = ({ onFormSubmit }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('https://archi-project-ijwki1yz2-vojtech-tynavskys-projects.vercel.app/api/contact', {
+            const response = await fetch('http://www.testproject.test/contact.php', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData)
+                body: JSON.stringify(formData),
             });
 
+            const text = await response.text();
+
+            const data = JSON.parse(text);
+
             if (response.ok) {
-                onFormSubmit(); // Volání funkce při úspěšném odeslání
+                onFormSubmit();
                 setFormData({
                     name: '',
                     phone: '',

@@ -11,12 +11,11 @@ import { TextUtilsProvider } from "./context/TextUtilsContext.jsx";
 function App() {
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-    // Funkce, která nastaví odeslání formuláře
+
     const handleFormSubmit = () => {
         setIsSubmitted(true);
         window.scrollTo({ top: 0, behavior: 'smooth' });
 
-        // Skrýt zprávu po 3 sekundách
         setTimeout(() => {
             setIsSubmitted(false);
         }, 3000);
@@ -26,7 +25,6 @@ function App() {
         <TextUtilsProvider>
             <Header />
             <main>
-                {/* Zpráva o úspěšném odeslání */}
                 {isSubmitted && (
                     <div className="submission-message">
                         <p>Email úspěšně odeslán!</p>
@@ -35,7 +33,6 @@ function App() {
                 <About />
                 <Services />
                 <AboutUs />
-                {/* Předáme funkci handleFormSubmit jako prop */}
                 <ContactForm onFormSubmit={handleFormSubmit} />
             </main>
             <Footer />
