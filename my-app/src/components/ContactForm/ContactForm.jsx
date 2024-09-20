@@ -18,8 +18,9 @@ const ContactForm = ({ onFormSubmit }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
         try {
-            const response = await fetch('http://www.testproject.test/contact.php', {
+            const response = await fetch('https://archi-souteze.cz/backend/contact.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -28,8 +29,14 @@ const ContactForm = ({ onFormSubmit }) => {
             });
 
             const text = await response.text();
+            let data;
 
-            const data = JSON.parse(text);
+            try {
+                data = text ? JSON.parse(text) : {};
+            } catch (e) {
+                console.error("Chyba při parsování JSON:", e);
+                return;
+            }
 
             if (response.ok) {
                 onFormSubmit();
@@ -42,11 +49,10 @@ const ContactForm = ({ onFormSubmit }) => {
                     message: ''
                 });
             } else {
-                alert('Nastala chyba při odesílání dotazu.');
+                console.error(data.error || 'Nastala chyba při odesílání dotazu.');
             }
         } catch (error) {
-            console.error('Chyba:', error);
-            alert('Nastala chyba při odesílání dotazu.');
+            console.error("Chyba při odesílání:", error.message);
         }
     };
 

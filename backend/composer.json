@@ -1,0 +1,10 @@
+{
+    "name": "vojtechtynavsky/archiproject",
+    "description": "A backend project for handling contact form submissions and sending emails for the ArchiProject website.",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
