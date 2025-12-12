@@ -14,7 +14,8 @@ const AboutUs = () => {
                 <div className="team-member">
                     <img src={architect} alt="Architektka Anna Laubová"/>
                     <h3>Ing. arch. Anna Laubová</h3>
-                    <p>{replaceWithNonBreakingSpace('Anna je absolventkou Fakulty architektury ČVUT v Praze. Během a po ukončení studií získávala zkušenosti v atelieru Bod architekti, který do velké míry formoval její vztah k architektuře. Po úspěchu v architektonické soutěži se profesně osamostatnila a od roku 2022 pracuje na vlastních projektech rozmanitého měřítka.')}</p>
+                    <p>{replaceWithNonBreakingSpace(
+                        "Anna je absolventkou Fakulty architektury ČVUT v Praze a autorizovaná architektka ČKA (ČKA 05755). Během a po ukončení studií získávala zkušenosti v atelieru Bod architekti, který do velké míry formoval její vztah k architektuře. Po úspěchu v architektonické soutěži se profesně osamostatnila a od roku 2022 pracuje na vlastních projektech rozmanitého měřítka.")}</p>
                 </div>
                 <div className="team-member">
                     <img src={lawyer} alt="Právník Petr Kouba"/>
